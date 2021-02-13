@@ -52,20 +52,20 @@ public class JobTest {
 
         assertTrue(test_job_partial.toString().equals("OOPS! This job does not seem to exist."));
 
-        assertTrue(test_job_partial1.toString().contains("Name:_Data not available._"));
-        assertTrue(test_job_partial2.toString().contains("Employer:_Data not available._"));
-        assertTrue(test_job_partial3.toString().contains("Location:_Data not available._"));
-        assertTrue(test_job_partial4.toString().contains("Position Type:_Data not available._"));
-        assertTrue(test_job_partial5.toString().contains("Core Competency:_Data not available._"));
-        assertTrue(test_job_partial6.toString().contains("Employer:_Data not available._"));
-        assertTrue(test_job_partial6.toString().contains("Location:_Data not available._"));
+        assertTrue(test_job_partial1.toString().contains("Name: Data not available."));
+        assertTrue(test_job_partial2.toString().contains("Employer: Data not available."));
+        assertTrue(test_job_partial3.toString().contains("Location: Data not available."));
+        assertTrue(test_job_partial4.toString().contains("Position Type: Data not available."));
+        assertTrue(test_job_partial5.toString().contains("Core Competency: Data not available."));
+        assertTrue(test_job_partial6.toString().contains("Employer: Data not available."));
+        assertTrue(test_job_partial6.toString().contains("Location: Data not available."));
 
-        assertTrue(test_job_full.toString().contains("ID:_"+ test_job_full.getId()+"_"));
-        assertTrue(test_job_full.toString().contains("Name:_Product tester_"));
-        assertTrue(test_job_full.toString().contains("Employer:_"+ test_job_full.getEmployer()+"_"));
-        assertTrue(test_job_full.toString().contains("Location:_"+test_job_full.getLocation()+"_"));
-        assertTrue(test_job_full.toString().contains("Position Type:_"+test_job_full.getPositionType()+"_"));
-        assertTrue(test_job_full.toString().contains("Core Competency:_"+test_job_full.getCoreCompetency()+"_"));
+        assertTrue(test_job_full.toString().contains("ID: "+ test_job_full.getId()));
+        assertTrue(test_job_full.toString().contains("Name: "+ test_job_full.getName()));
+        assertTrue(test_job_full.toString().contains("Employer: "+ test_job_full.getEmployer()));
+        assertTrue(test_job_full.toString().contains("Location: "+test_job_full.getLocation()));
+        assertTrue(test_job_full.toString().contains("Position Type: "+test_job_full.getPositionType()));
+        assertTrue(test_job_full.toString().contains("Core Competency: "+test_job_full.getCoreCompetency()));
 
     }
 

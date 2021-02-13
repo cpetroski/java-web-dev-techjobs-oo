@@ -58,36 +58,36 @@ public class Job {
         }
 
 
-        retval = "ID:_"+id+"_\n";
+        retval = "ID: "+id+"\n";
 
         if (this.name != null && this.name.equals("")) {
-            retval += "Name:_Data not available._\n";
+            retval += "Name: Data not available.\n";
         }else {
-            retval += "Name:_" + name + "_\n";
+            retval += "Name: " + name + "\n";
         }
 
         if (this.employer != null && this.employer.toString().equals("")){
-            retval += "Employer:_Data not available._\n";
+            retval += "Employer: Data not available.\n";
         }else {
-            retval += "Employer:_" + employer + "_\n";
+            retval += "Employer: " + employer + "\n";
         }
 
         if (this.location != null && this.location.toString().equals("")){
-            retval += "Location:_Data not available._";
+            retval += "Location: Data not available.";
         }else {
-            retval += "Location:_" + location +"_\n";
+            retval += "Location: " + location +"\n";
         }
 
         if (this.positionType != null && this.positionType.toString().equals("")){
-            retval += "Position Type:_Data not available._\n";
+            retval += "Position Type: Data not available.\n";
         }else{
-            retval += "Position Type:_" + positionType +"_\n";
+            retval += "Position Type: " + positionType +"\n";
         }
 
         if (this.coreCompetency != null && this.coreCompetency.toString().equals("")){
-                retval += "Core Competency:_Data not available._\n";
+                retval += "Core Competency: Data not available.\n";
         }else{
-                retval += "Core Competency:_" + coreCompetency +"_\n";
+                retval += "Core Competency: " + coreCompetency +"\n";
         }
         return retval;
     }
