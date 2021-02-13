@@ -42,11 +42,23 @@ public class JobTest {
     @Test
     public void testToStringForJobs(){
         Job test_job_full= new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        Job test_job_partial= new Job();
+        Job test_job_partial= new Job("",new Employer(""),new Location(""),new PositionType(""),new CoreCompetency(""));
         Job test_job_partial1=new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job test_job_partial2= new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job test_job_partial3= new Job("Product tester", new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job test_job_partial4= new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
+        Job test_job_partial5= new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+        Job test_job_partial6= new Job("Product tester", new Employer(""), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
+        assertTrue(test_job_partial.toString().equals("OOPS! This job does not seem to exist."));
 
         assertTrue(test_job_partial1.toString().contains("Name:_Data not available._"));
+        assertTrue(test_job_partial2.toString().contains("Employer:_Data not available._"));
+        assertTrue(test_job_partial3.toString().contains("Location:_Data not available._"));
+        assertTrue(test_job_partial4.toString().contains("Position Type:_Data not available._"));
+        assertTrue(test_job_partial5.toString().contains("Core Competency:_Data not available._"));
+        assertTrue(test_job_partial6.toString().contains("Employer:_Data not available._"));
+        assertTrue(test_job_partial6.toString().contains("Location:_Data not available._"));
 
         assertTrue(test_job_full.toString().contains("ID:_"+ test_job_full.getId()+"_"));
         assertTrue(test_job_full.toString().contains("Name:_Product tester_"));

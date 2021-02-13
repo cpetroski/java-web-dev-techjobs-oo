@@ -51,12 +51,12 @@ public class Job {
 
     @Override
     public String toString() {
-        String retval ="";
+        String retval =new String();
 
-        if (this.name.equals("") && this.employer.toString().equals("") && this.location.toString().equals("") && this.positionType.toString().equals("") && this.coreCompetency.toString().equals("")){
-            retval += "OOPS! This job does not seem to exist.";
-            return retval;
+        if (this.name.equals("") && this.employer.toString().equals("") && this.location.toString().equals("") && this.positionType.toString().equals("") && this.coreCompetency.toString().equals("")) {
+            return "OOPS! This job does not seem to exist.";
         }
+
 
         retval = "ID:_"+id+"_\n";
 
