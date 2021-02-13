@@ -49,6 +49,48 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String retval ="";
+
+        if (this.name.equals("") && this.employer.toString().equals("") && this.location.toString().equals("") && this.positionType.toString().equals("") && this.coreCompetency.toString().equals("")){
+            retval += "OOPS! This job does not seem to exist.";
+            return retval;
+        }
+
+        retval = "ID:_"+id+"_\n";
+
+        if (this.name != null && this.name.equals("")) {
+            retval += "Name:_Data not available._\n";
+        }else {
+            retval += "Name:_" + name + "_\n";
+        }
+
+        if (this.employer != null && this.employer.toString().equals("")){
+            retval += "Employer:_Data not available._\n";
+        }else {
+            retval += "Employer:_" + employer + "_\n";
+        }
+
+        if (this.location != null && this.location.toString().equals("")){
+            retval += "Location:_Data not available._";
+        }else {
+            retval += "Location:_" + location +"_\n";
+        }
+
+        if (this.positionType != null && this.positionType.toString().equals("")){
+            retval += "Position Type:_Data not available._\n";
+        }else{
+            retval += "Position Type:_" + positionType +"_\n";
+        }
+
+        if (this.coreCompetency != null && this.coreCompetency.toString().equals("")){
+                retval += "Core Competency:_Data not available._\n";
+        }else{
+                retval += "Core Competency:_" + coreCompetency +"_\n";
+        }
+        return retval;
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
